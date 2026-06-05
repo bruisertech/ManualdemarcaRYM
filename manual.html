@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Manual de Marca - Fragancias RYM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#006039',
+                            pink: '#FCE7F3', /* Complementary elegant pink */
+                            pinkDark: '#F472B6',
+                            bg: '#F9FAFB',
+                            text: '#1F2937'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+            color: #1F2937;
+        }
+
+        /* Custom scrollbar for sidebar */
+        .sidebar-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background-color: #e5e7eb;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="flex flex-col md:flex-row min-h-screen">
+
+    <!-- Mobile Header -->
+    <header class="md:hidden bg-brand-green text-white p-4 sticky top-0 z-50 flex justify-between items-center shadow-md">
+        <h1 class="font-bold text-lg">Fragancias RYM</h1>
+        <button id="mobile-menu-btn" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="w-full md:w-64 bg-white border-r border-gray-200 fixed h-full z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col pt-16 md:pt-0">
+        <div class="p-6 border-b border-gray-100 hidden md:block">
+            <h2 class="text-2xl font-extrabold text-brand-green tracking-tight">Fragancias RYM</h2>
+            <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Manual de Marca</p>
+        </div>
+        <nav class="flex-1 overflow-y-auto sidebar-scroll p-4 space-y-1">
+            <a href="#intro" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-brand-pink hover:text-brand-green transition-colors">1. Introducción y Filosofía</a>
+            <a href="#logo" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-brand-pink hover:text-brand-green transition-colors">2. Logotipo y Construcción</a>
+            <a href="#colors" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-brand-pink hover:text-brand-green transition-colors">3. Paleta de Colores</a>
+            <a href="#typography" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-brand-pink hover:text-brand-green transition-colors">4. Tipografía</a>
+            <a href="#voice" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-brand-pink hover:text-brand-green transition-colors">5. Voz de Marca</a>
+        </nav>
+        <div class="p-4 border-t border-gray-100 text-xs text-gray-400 text-center">
+            Uso B2B Exclusivo
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 md:ml-64 p-6 md:p-12 lg:p-20 overflow-hidden">
+
+        <!-- SECTION 1: Introducción y Filosofía -->
+        <section id="intro" class="mb-32 scroll-mt-24">
+            <div class="relative rounded-3xl overflow-hidden bg-brand-green text-white p-10 md:p-16 lg:p-24 shadow-2xl mb-12">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full transform translate-x-1/3 -translate-y-1/3 blur-2xl"></div>
+                <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-pink opacity-10 rounded-full transform -translate-x-1/2 translate-y-1/3 blur-3xl"></div>
+
+                <div class="relative z-10 max-w-3xl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white bg-opacity-20 backdrop-blur-sm text-sm font-medium tracking-widest uppercase mb-6">
+                        Mega Manual de Marca
+                    </span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Lujo y distinción en cada gota.
+                    </h2>
+                    <p class="text-lg md:text-xl text-green-100 font-light leading-relaxed max-w-2xl">
+                        Bienvenidos al corazón de Fragancias RYM. Este documento rige los principios fundamentales de nuestra identidad visual y verbal, garantizando una comunicación coherente, exclusiva y orientada a la excelencia B2B en el mundo de la alta perfumería.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-brand-pink rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lujo B2B</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Nuestra estética comunica exclusividad corporativa. Diseñados para socios mayoristas, proyectamos un nivel de sofisticación que eleva cualquier portafolio.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-brand-pink rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Calidad Intransigente</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        La excelencia no es opcional. Desde los ingredientes hasta cada elemento de esta marca, el rigor y la perfección rigen nuestras decisiones visuales.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-brand-pink rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Exclusividad</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        El diseño de Fragancias RYM debe sentirse como un club privado. Espacios amplios, tipografía cuidada y un uso maestro del color corporativo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Logotipo y Construcción -->
+        <section id="logo" class="mb-32 scroll-mt-24">
+            <div class="mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">2. Logotipo y Construcción</h2>
+                <p class="text-gray-600 max-w-3xl leading-relaxed">
+                    El logotipo de Fragancias RYM es el activo visual más importante de la marca. Su correcta aplicación asegura el reconocimiento y mantiene el estatus de lujo en todos los puntos de contacto corporativos.
+                </p>
+            </div>
+
+            <!-- Logo display -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Light Background -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-12 flex flex-col items-center justify-center relative group">
+                    <span class="absolute top-4 left-4 text-xs font-semibold text-gray-400 uppercase tracking-widest">Fondo Claro</span>
+                    <img src="fraganciasrym.png" alt="Logo Fragancias RYM Claro" class="max-w-xs w-full h-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <!-- Dark Background -->
+                <div class="bg-brand-text rounded-2xl p-12 flex flex-col items-center justify-center relative shadow-lg group">
+                    <span class="absolute top-4 left-4 text-xs font-semibold text-gray-400 uppercase tracking-widest">Fondo Oscuro</span>
+                    <!-- Assuming the logo has transparency. For dark bg, often a white or inverted version is used.
+                         If the original is dark, we can apply a CSS filter for demonstration, or just show it with a lighter dark background.
+                         We'll use a slightly lighter dark background so the dark green logo might still be visible, or use a white background to emulate a white logo version.
+                         Let's use a CSS filter to invert/brightness for demo purposes of a 'negative' logo. -->
+                    <img src="fraganciasrym.png" alt="Logo Fragancias RYM Oscuro" class="max-w-xs w-full h-auto brightness-0 invert transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+
+            <!-- Área de Respeto -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Área de Respeto</h3>
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                    <div class="relative inline-block border border-dashed border-brand-pinkDark p-8 md:p-12">
+                        <!-- 'x' indicators -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-brand-pinkDark font-mono text-sm">2x</div>
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full pt-2 text-brand-pinkDark font-mono text-sm">2x</div>
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full pr-2 text-brand-pinkDark font-mono text-sm">2x</div>
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full pl-2 text-brand-pinkDark font-mono text-sm">2x</div>
+
+                        <!-- Corner markers to simulate grid -->
+                        <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-brand-pinkDark"></div>
+                        <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-brand-pinkDark"></div>
+                        <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-brand-pinkDark"></div>
+                        <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-brand-pinkDark"></div>
+
+                        <img src="fraganciasrym.png" alt="Área de respeto" class="w-48">
+                    </div>
+                    <div class="max-w-md">
+                        <p class="text-gray-600 leading-relaxed">
+                            Para garantizar la óptima legibilidad e impacto del logotipo, siempre se debe mantener un espacio libre (área de respeto) a su alrededor. Este espacio está determinado por la medida "2x" equivalente al doble del alto de la letra de la marca, asegurando que no se vea saturado por otros elementos gráficos o bordes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usos Incorrectos -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Usos Incorrectos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Distorted -->
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100 flex flex-col items-center">
+                        <div class="h-32 flex items-center justify-center w-full mb-4">
+                            <img src="fraganciasrym.png" alt="Deformado" class="w-32 scale-y-150 object-contain">
+                        </div>
+                        <div class="w-full flex items-center gap-2 text-red-600 font-bold text-sm mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            No Deformar
+                        </div>
+                        <p class="text-xs text-red-800 text-center">No alterar las proporciones originales del logotipo estrechándolo o alargándolo.</p>
+                    </div>
+                    <!-- Wrong Color -->
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100 flex flex-col items-center">
+                        <div class="h-32 flex items-center justify-center w-full mb-4">
+                            <img src="fraganciasrym.png" alt="Color incorrecto" class="w-32 hue-rotate-90 sepia object-contain">
+                        </div>
+                        <div class="w-full flex items-center gap-2 text-red-600 font-bold text-sm mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            No Cambiar Color
+                        </div>
+                        <p class="text-xs text-red-800 text-center">No utilizar colores fuera de la paleta permitida. El verde corporativo #006039 es inalterable.</p>
+                    </div>
+                    <!-- Low Contrast / Rotation -->
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100 flex flex-col items-center">
+                        <div class="h-32 flex items-center justify-center w-full mb-4 bg-green-800 rounded">
+                            <img src="fraganciasrym.png" alt="Bajo contraste" class="w-32 object-contain opacity-70">
+                        </div>
+                        <div class="w-full flex items-center gap-2 text-red-600 font-bold text-sm mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Bajo Contraste
+                        </div>
+                        <p class="text-xs text-red-800 text-center">No aplicar el logotipo sobre fondos complejos o colores que comprometan su legibilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Paleta de Colores -->
+        <section id="colors" class="mb-32 scroll-mt-24">
+            <div class="mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">3. Paleta de Colores</h2>
+                <p class="text-gray-600 max-w-3xl leading-relaxed">
+                    Nuestra paleta de colores refleja el lujo, la naturaleza y la exclusividad. El uso consistente de estos tonos es vital para mantener el reconocimiento de marca. <strong class="text-brand-green">Haz clic en cualquier color para copiar su código HEX.</strong>
+                </p>
+            </div>
+
+            <!-- Toast Notification -->
+            <div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span id="toast-text" class="font-medium text-sm">¡Copiado!</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Color 1: Primary Green -->
+                <div class="group cursor-pointer color-card" data-color="#006039">
+                    <div class="h-48 rounded-2xl shadow-sm mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg relative overflow-hidden" style="background-color: #006039;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 font-medium tracking-wide flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                Copiar
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-lg">Verde Corporativo</h4>
+                        <p class="text-gray-500 font-mono text-sm mt-1">#006039</p>
+                        <p class="text-xs text-gray-400 mt-2">Principal. Usado en logotipos, fondos clave y botones de acción primaria.</p>
+                    </div>
+                </div>
+
+                <!-- Color 2: Pink Complementary -->
+                <div class="group cursor-pointer color-card" data-color="#FCE7F3">
+                    <div class="h-48 rounded-2xl shadow-sm mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg relative overflow-hidden border border-gray-100" style="background-color: #FCE7F3;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all flex items-center justify-center">
+                            <span class="text-gray-800 opacity-0 group-hover:opacity-100 font-medium tracking-wide flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                Copiar
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-lg">Rosa Complementario</h4>
+                        <p class="text-gray-500 font-mono text-sm mt-1">#FCE7F3</p>
+                        <p class="text-xs text-gray-400 mt-2">Secundario. Elegante contraste para áreas de apoyo y detalles delicados.</p>
+                    </div>
+                </div>
+
+                <!-- Color 3: Background Gray -->
+                <div class="group cursor-pointer color-card" data-color="#F9FAFB">
+                    <div class="h-48 rounded-2xl shadow-sm mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg relative overflow-hidden border border-gray-200" style="background-color: #F9FAFB;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all flex items-center justify-center">
+                            <span class="text-gray-800 opacity-0 group-hover:opacity-100 font-medium tracking-wide flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                Copiar
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-lg">Gris Claro</h4>
+                        <p class="text-gray-500 font-mono text-sm mt-1">#F9FAFB</p>
+                        <p class="text-xs text-gray-400 mt-2">Fondo. Proporciona un lienzo limpio y aireado para el contenido extenso.</p>
+                    </div>
+                </div>
+
+                <!-- Color 4: Text Dark -->
+                <div class="group cursor-pointer color-card" data-color="#1F2937">
+                    <div class="h-48 rounded-2xl shadow-sm mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg relative overflow-hidden" style="background-color: #1F2937;">
+                        <div class="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 font-medium tracking-wide flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                Copiar
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-lg">Gris Oscuro</h4>
+                        <p class="text-gray-500 font-mono text-sm mt-1">#1F2937</p>
+                        <p class="text-xs text-gray-400 mt-2">Texto. Asegura alta legibilidad manteniendo la suavidad frente al negro puro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Tipografía -->
+        <section id="typography" class="mb-32 scroll-mt-24">
+            <div class="mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">4. Tipografía</h2>
+                <p class="text-gray-600 max-w-3xl leading-relaxed">
+                    La familia tipográfica principal es <strong class="text-brand-green">Inter</strong>. Una fuente sans-serif moderna, geométrica y altamente legible que transmite una imagen limpia, profesional y contemporánea, ideal para entornos digitales e impresos de alta gama.
+                </p>
+            </div>
+
+            <!-- Font Showcase -->
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-16 mb-12 relative overflow-hidden">
+                <div class="absolute right-0 top-0 text-[10rem] md:text-[15rem] font-bold text-gray-50 leading-none -mt-10 -mr-10 pointer-events-none">Aa</div>
+                <div class="relative z-10">
+                    <h3 class="text-6xl md:text-8xl font-normal text-brand-green mb-8">Inter</h3>
+
+                    <div class="mb-12">
+                        <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">Alfabeto</p>
+                        <p class="text-2xl md:text-3xl lg:text-4xl text-gray-800 break-words leading-relaxed font-light">
+                            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                            a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+                            0 1 2 3 4 5 6 7 8 9
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-100 pt-12">
+                        <!-- Extra Bold -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-brand-green text-white text-xs font-bold px-2 py-1 rounded">800</span>
+                                <h4 class="font-bold text-gray-900">Extra Bold</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Uso exclusivo para títulos grandes, llamadas a la acción (CTAs) y destacados de impacto.</p>
+                            <p class="text-3xl font-extrabold text-gray-900">Nuevas Fragancias.</p>
+                        </div>
+                        <!-- Regular -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded">400</span>
+                                <h4 class="font-bold text-gray-900">Regular</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Uso para cuerpo de texto general, párrafos largos y descripciones de producto.</p>
+                            <p class="text-lg font-normal text-gray-900 leading-relaxed">Las notas de salida evocan frescura extrema, perfectas para un mercado selecto.</p>
+                        </div>
+                        <!-- Light -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded">300</span>
+                                <h4 class="font-bold text-gray-900">Light</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Uso para subtítulos elegantes, metadatos y notas al pie donde se requiera sutileza.</p>
+                            <p class="text-2xl font-light text-gray-900 tracking-wide">Colección Exclusiva 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Voz de Marca -->
+        <section id="voice" class="mb-32 scroll-mt-24">
+            <div class="mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">5. Voz de Marca</h2>
+                <p class="text-gray-600 max-w-3xl leading-relaxed">
+                    La forma en que nos comunicamos es tan importante como nuestra apariencia visual. Nuestra voz debe transmitir confianza, conocimiento técnico y un profundo respeto por la industria de la perfumería de lujo al por mayor.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tone 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center text-white font-bold">1</div>
+                        <h3 class="text-xl font-bold text-gray-900">Profesional y Técnica</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Hablamos con autoridad. Conocemos las notas olfativas, los procesos de maceración y las tendencias del mercado global. Nuestros clientes B2B confían en nuestro expertise.
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-brand-green">
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-wide block mb-1">Ejemplo:</span>
+                        <p class="text-sm italic text-gray-700">"Nuestra nueva línea incorpora absoluto de rosa damascena, garantizando una fijación superior de 12 horas, ideal para su segmento premium."</p>
+                    </div>
+                </div>
+
+                <!-- Tone 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center text-white font-bold">2</div>
+                        <h3 class="text-xl font-bold text-gray-900">Exclusiva pero Accesible</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Proyectamos lujo sin ser arrogantes. Somos un socio estratégico de alto nivel que trata a cada cliente mayorista con extrema cortesía y atención personalizada.
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-brand-green">
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-wide block mb-1">Ejemplo:</span>
+                        <p class="text-sm italic text-gray-700">"Le invitamos a descubrir nuestra colección privada. Nuestro equipo de asesores está a su disposición para diseñar una propuesta a la medida de sus boutiques."</p>
+                    </div>
+                </div>
+
+                <!-- Tone 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center text-white font-bold">3</div>
+                        <h3 class="text-xl font-bold text-gray-900">Orientada a Resultados B2B</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Entendemos que el lujo debe ser rentable para nuestros socios. Comunicamos valor, márgenes atractivos y rotación de inventario con un lenguaje sofisticado.
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-brand-green">
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-wide block mb-1">Ejemplo:</span>
+                        <p class="text-sm italic text-gray-700">"Optimice su portafolio comercial con nuestras fragancias de alta rotación, diseñadas para maximizar el margen de beneficio en retail de lujo."</p>
+                    </div>
+                </div>
+
+                <!-- Dos and Don'ts -->
+                <div class="bg-brand-text p-8 rounded-2xl shadow-sm text-white flex flex-col justify-center">
+                    <h3 class="text-xl font-bold mb-6">Reglas Básicas</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sm text-gray-300">Hablar de usted (formalidad elegante).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sm text-gray-300">Usar vocabulario rico (aroma, estela, notas, maceración).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-sm text-gray-300">Evitar jerga informal o términos de "descuento barato".</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-sm text-gray-300">No presionar al cliente; nosotros atraemos, no empujamos.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Color Copy to Clipboard Logic
+        const colorCards = document.querySelectorAll('.color-card');
+        const toast = document.getElementById('toast');
+        const toastText = document.getElementById('toast-text');
+        let toastTimeout;
+
+        colorCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const hexColor = card.getAttribute('data-color');
+
+                navigator.clipboard.writeText(hexColor).then(() => {
+                    // Show toast
+                    toastText.textContent = `¡Copiado ${hexColor}!`;
+                    toast.classList.remove('translate-y-20', 'opacity-0');
+
+                    // Hide toast after 2.5s
+                    clearTimeout(toastTimeout);
+                    toastTimeout = setTimeout(() => {
+                        toast.classList.add('translate-y-20', 'opacity-0');
+                    }, 2500);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            });
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const links = sidebar.querySelectorAll('a');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
